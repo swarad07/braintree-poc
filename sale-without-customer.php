@@ -28,13 +28,10 @@
    * Use Case 2
    */
 
-  $post = $_POST;
-  //print '<pre>'; print_r($_POST); print '</pre>'; exit();
-  $money = number_format($post['money'], 2, '.', '');
-  $nonce = $post['payment_method_nonce'];
-  $service_fee = number_format($money * 0.4, 2, '.', '');
+  // $post = $_POST;
+  // $nonce = $post['payment_method_nonce'];
 
-  print '<pre>'; print_r($nonce); print '</pre>'; 
+  // print '<pre>'; print_r($nonce); print '</pre>'; 
   
   // $result = Braintree_Transaction::sale(array(
   //   'amount' => '100.00',
@@ -50,24 +47,15 @@
 
   $result = Braintree_Transaction::sale(
     array(
-      'amount' => $money,
+      'amount' => '820.00',
       'merchantAccountId' => 'test_mentor_4',
-      'paymentMethodNonce' => $nonce,
+      //'paymentMethodNonce' => $nonce,
+      'customerId' => 'kimi_raikkonen',
+      //'paymentMethodToken' => 'hdjkmb',
       'options' => array(
         'submitForSettlement' => true,
-        'storeInVaultOnSuccess' => true,
       ),
-      'customer' => array(
-        'id' => 'kimi_raikkonen',
-        'firstName' => 'Kimi',
-        'lastName' => 'Raikkonen',
-        'company' => 'Iceman Rules!',
-        'phone' => '312-555-1234',
-        'fax' => '312-555-1235',
-        'website' => 'http://www.example.com',
-        'email' => 'kimi@example.com'
-      ),
-      'serviceFeeAmount' => $service_fee,
+      'serviceFeeAmount' => '40.00'
     )
   );
   

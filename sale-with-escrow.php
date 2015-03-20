@@ -54,18 +54,19 @@
       'merchantAccountId' => 'test_mentor_4',
       'paymentMethodNonce' => $nonce,
       'options' => array(
-        'submitForSettlement' => true,
+        'submitForSettlement' => false,
         'storeInVaultOnSuccess' => true,
+        'holdInEscrow' => true,
       ),
       'customer' => array(
-        'id' => 'kimi_raikkonen',
-        'firstName' => 'Kimi',
-        'lastName' => 'Raikkonen',
+        'id' => 'mika_haikkenen_2',
+        'firstName' => 'Mika',
+        'lastName' => 'Haikkenen 2',
         'company' => 'Iceman Rules!',
         'phone' => '312-555-1234',
         'fax' => '312-555-1235',
         'website' => 'http://www.example.com',
-        'email' => 'kimi@example.com'
+        'email' => 'mika@example.com'
       ),
       'serviceFeeAmount' => $service_fee,
     )

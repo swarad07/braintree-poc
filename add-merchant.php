@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
@@ -27,6 +28,7 @@ Braintree_Configuration::environment('sandbox');
 Braintree_Configuration::merchantId('798g8p9m5ywqkx2w');
 Braintree_Configuration::publicKey('rcyk692mb4n673sc');
 Braintree_Configuration::privateKey('3c29980b60a25f02b36990e05fe1d94e');
+
 /**
  * Use Case 1
  */
@@ -34,8 +36,8 @@ $result = Braintree_MerchantAccount::create(
   array(
     'individual' => array(
       'firstName' => 'Test::$approve',
-      'lastName' => 'Mentor',
-      'email' => 'jane@14ladders.com',
+      'lastName' => 'Mentor four',
+      'email' => 'mentorfour@14ladders.com',
       'phone' => '5553334444',
       'dateOfBirth' => '1981-11-19',
       'ssn' => '456-45-4569',
@@ -47,16 +49,16 @@ $result = Braintree_MerchantAccount::create(
       )
     ),
     'funding' => array(
-      'descriptor' => 'tm1',
+      'descriptor' => 'tm4',
       'destination' => Braintree_MerchantAccount::FUNDING_DESTINATION_BANK,
-      'email' => 'funding@blueladders.com',
+      'email' => 'tm3@blueladders.com',
       'mobilePhone' => '5555555555',
       'accountNumber' => '1123581321',
       'routingNumber' => '071101307'
     ),
     'tosAccepted' => true,
     'masterMerchantAccountId' => "t4m527kwfg9tztxk",
-    'id' => "test_mentor_1"
+    'id' => "test_mentor_4"
   )
 );
 
